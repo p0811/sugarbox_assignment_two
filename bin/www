@@ -3,7 +3,7 @@
 /**
  * Module dependencies.
  */
-
+require('../utils/dbconnection')
 const app = require('../app');
 const debug = require('debug')('sugarboxassignment:server');
 const http = require('http');
