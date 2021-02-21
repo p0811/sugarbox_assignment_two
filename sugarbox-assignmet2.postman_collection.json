@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "412d565e-3527-4f33-bc1f-b2dfa82d23c7",
+		"name": "sugarbox-assignmet2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "suggerbox_assignment-2021",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"piyush2@gmail.com\",\n    \"password\": \"741719940s\",\n    \"name\":\"Piyush\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/sugerbox/user",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"sugerbox",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5hbWUiOiJwaXl1c2giLCJlbWFpbCI6InBpeXVzaDE5OTIxQGdtYWlsLmNvbSJ9LCJpYXQiOjE2MTM4OTcxNjEsImV4cCI6MTYxMzkzMzE2MX0.0kAOCEg7GW7N_eDvEeg3KPjtJk9pwIhODCGKa4zUWtw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "suggerbox_assignment-2021",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"obj_id\": \"60321bd36f680b2783b71353\",\n    \"task_title\": \"Task Title1\",\n    \"task_description\":\"Task description1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/sugerbox/create-task",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"sugerbox",
+						"create-task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "suggerbox_assignment-2021",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"piyush19921@gmail.com\",\n    \"password\": \"741719940s\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/sugerbox/user-login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"sugerbox",
+						"user-login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5hbWUiOiJwaXl1c2giLCJlbWFpbCI6InBpeXVzaDE5OTIxQGdtYWlsLmNvbSJ9LCJpYXQiOjE2MTM4OTcxNjEsImV4cCI6MTYxMzkzMzE2MX0.0kAOCEg7GW7N_eDvEeg3KPjtJk9pwIhODCGKa4zUWtw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"type": "text",
+						"value": "suggerbox_assignment-2021"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"piyush19921@gmail.com\",\n    \"password\": \"741719940s\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/sugerbox/users?page=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"sugerbox",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5hbWUiOiJwaXl1c2giLCJlbWFpbCI6InBpeXVzaDE5OTIxQGdtYWlsLmNvbSJ9LCJpYXQiOjE2MTM4OTcxNjEsImV4cCI6MTYxMzkzMzE2MX0.0kAOCEg7GW7N_eDvEeg3KPjtJk9pwIhODCGKa4zUWtw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"type": "text",
+						"value": "suggerbox_assignment-2021"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"piyush19921@gmail.com\",\n    \"password\": \"741719940s\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/sugerbox/users/60321bd36f680b2783b71353",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"sugerbox",
+						"users",
+						"60321bd36f680b2783b71353"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
