@@ -1,0 +1,5 @@
+{
+    "client_id": "suggerbox_assignment-2021",
+    "jwt_secreat_key": "sugger_box_key",
+    "db_limit": 10
+}
