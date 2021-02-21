@@ -11,7 +11,7 @@ const indexRouter = require('./routes/index');
 const app = express();
 
 // validate api with client key
-// app.use(apiValidator.clientValidator);
+app.use(apiValidator.clientValidator);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
